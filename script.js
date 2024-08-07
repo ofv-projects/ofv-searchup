@@ -20,11 +20,11 @@ window.addEventListener('DOMContentLoaded', () => {
           resultsContainer.appendChild(resultItem);
         });
       } else {
-        resultsContainer.innerHTML = '<p>Keine Versionen gefunden</p>';
+        resultsContainer.innerHTML = '<p>No matching firmwares found.</p>';
       }
     })
     .catch(error => {
-      console.error('Fehler bei der Anfrage:', error);
-      resultsContainer.innerHTML = '<p>Fehler beim Laden der Versionen</p>';
+      console.error('Error while requesting:', error);
+      resultsContainer.innerHTML = '<p>Failed to load firmwares.</p>';
     });
 })})
